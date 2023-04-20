@@ -1,0 +1,70 @@
+header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    transform: translateY(calc(var(--scrollPos) * -1));
+}
+
+header .bg {
+    position: absolute;
+
+    width: 65vw;
+    height: 65vw;
+    background-color: rgb(233, 233, 233);
+
+    transform: rotate(5deg);
+    overflow: hidden;
+}
+header .sbg {
+    position: absolute;
+    right: -2em;
+    bottom: 1em;
+    width: 20vw;
+    height: 20vw;
+    background-color: rgb(216, 216, 216);
+    
+    transform: rotate(5deg);
+}
+header .sbg2 {
+    position: absolute;
+    right: -2em;
+    top: 150em;
+    width: 20vw;
+    height: 20vw;
+    background-color: rgb(216, 216, 216);
+    
+    transform: rotate(5deg);
+}
+header .sbg3 {
+    position: absolute;
+
+    width: 65vw;
+    height: 65vw;
+    top: 300em;
+    background-color: rgb(233, 233, 233);
+
+    transform: rotate(5deg);
+    overflow: hidden;
+}
+@media print {
+    header .bg {
+        visibility: hidden;
+    }
+    header .sbg {
+        visibility: hidden;
+    }
+    header .sbg2 {
+        visibility: hidden;
+    }
+    header .sbg3 {
+        visibility: hidden;
+    }
+}
+header .content {
+    position: absolute;
+    width: 86vw;
+    margin: 7vw;
+    font-size: clamp(18pt, 3vw, 34pt);
+    transform: translateY(var(--scrollPos));
+}

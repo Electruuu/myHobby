@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="author" content="Bartek O">
+    <meta name="description" content="Moje hobby">
+    <script src="js/main.mjs" type="module"></script>
+    <link rel="shortcut icon" href="images/logo_no_bg.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" class="toggle">
+        <svg width="78" height="70" viewBox="0 0 78 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="hamburger" width="77.7778" height="15.5556" rx="7.77778" fill="#343434"/>
+            <rect class="hamburger" y="27.2222" width="77.7778" height="15.5556" rx="7.77778" fill="#343434"/>
+            <rect class="hamburger" y="54.4445" width="77.7778" height="15.5556" rx="7.77778" fill="#343434"/>
+        </svg>
+        <div class="full">
+            <ul>
+                <li><a href="./index.html">Strona główna</a></li>
+                <li><a href="./projekty.html">Projekty</a></li>
+                <li><a href="./uzywam.html">Czego używam?</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+            <span>MENU</span>
+        </div>
+    </nav>
+    <header style="max-height: 15vw;">
+        <div class="bg"></div>
+        <div class="sbg"></div>
+        <div class="sbg2"></div>
+        <div class="content">
+            <h1 class="tytulMain">Czego używam?</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <p>
+                Bez programu do grafiki komputerowej ani rusz. Tutaj znajdziesz listę tych, których używam!
+            </p>
+        </section>
+        <section class="box">
+            <h2>Blender</h2>
+            <p>Darmowy open-source program do grafiki 3D, 2D, VFX, CGI itp.</p>
+            <div class="center">
+                <img style="max-height: none;" src="images/projects/blenderUI.png" alt="UI programu Blender">
+            </div>
+        </section>
+        <section class="box">
+            <h2>Figma</h2>
+            <p>W większości darmowy program do projektowania interfejsów stron internetowych i aplikacji oraz grafiki wektorowej.</p>
+            <div class="center">
+                <img style="max-height: none;" src="images/projects/figmaUI.png" alt="Loga i ikony">
+            </div>
+        </section>
+        <section class="box">
+            <h2>Visual Studio Code</h2>
+            <p>Darmowy edytor kodu, rozwijany przez firmę Microsoft. Uznaje go tu jako służący do grafiki ze względu na to, że używam go do pisania CSS</p>
+            <div class="center">
+                <img style="max-height: none;" src="images/projects/vscUI.png" alt="miniaturka">
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; Bartek O
+    </footer>
+</body>
+</html>

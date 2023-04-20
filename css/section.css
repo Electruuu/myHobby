@@ -1,0 +1,79 @@
+main {
+    position: relative;
+    z-index: 20;
+}
+
+section {
+    margin: 2em clamp(1em, 15vw, 16em);
+    font-size: 16pt;
+    line-height: 1.5em;
+}
+section h1 {
+    font-size: 32pt;
+    line-height: 1.8em;
+}
+section h2:not(.box) {
+    margin-top: 1em;
+}
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8em;
+}
+section img {
+    max-width: 100%;
+    max-height: 310px;
+
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: position, left, top, transform, border-color;
+
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0);
+}
+section video {
+    max-width: 100%;
+    margin-top: 1em;
+
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: position, left, top, transform;
+
+    cursor: pointer;
+}
+section img.full {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 0vw), calc(-50% + 0vh)) !important;
+    max-height: 90vh !important;
+    z-index: 1000;
+    border-left: 800vw solid;
+    border-right: 800vw solid;
+    border-top: 800vh solid;
+    border-bottom: 800vh solid;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+#darkener.active {
+    visibility: visible;
+}
+section img:hover {
+    transform: scale(1.02);
+}
+
+section.box {
+    background-color: rgb(235, 235, 235);
+    border: 0.5em white solid;
+    padding: 2em;
+}
+@media only screen and (max-width: 800px) {
+    section.box {
+        margin: 2em 0;
+    }
+}
+@media print {
+    section {
+        margin: 0 0;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+}

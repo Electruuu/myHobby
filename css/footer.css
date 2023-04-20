@@ -1,0 +1,36 @@
+footer {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    padding: 0em clamp(1em, 15vw, 16em);
+    margin-top: 5em;
+}
+footer::before {
+    content: ' ';
+    position: relative;
+    display: block;
+    top: -2.5em;
+    width: 5em;
+    height: 5em;
+    transform: rotateZ(45deg);
+    background-color: rgb(40, 40, 40);
+}
+footer::after {
+    content: ' ';
+    position: relative;
+    display: block;
+    bottom: 8.5em;
+    right: 5em;
+    width: 5em;
+    height: 5em;
+    transform: rotateZ(45deg);
+    background-color: rgb(40, 40, 40);
+}
+@media print {
+    footer {
+        background-color: rgba(0, 0, 0, 0);
+        color: black;
+    }
+    footer::before, footer::after {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,118 @@
+nav {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 120%;
+    user-select: none;
+}
+@media print {
+    nav {
+        visibility: hidden;
+    }
+}
+nav > input, nav > svg {
+    position: fixed;
+    z-index: 200;
+    right: 1em;
+    top: 1em;
+
+    width: 64px;
+    height: 64px;
+
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+}
+nav > input {
+    z-index: 400;
+}
+nav > input {
+    opacity: 0;
+}
+nav .full {
+    position: fixed;
+    z-index: 100;
+    right: -75vw;
+    top: 0;
+    
+    background-color: rgb(46, 46, 46);
+    width: 75vw;
+    height: 100vh;
+    
+    outline: 0vw solid rgba(0, 0, 0, 0.4);
+    
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s right,
+    ease-in 0.3s outline;
+}
+@media only screen and (max-width: 800px) {
+    nav .full {
+        width: 100vw;
+        right: -100vw;
+        font-size: 50%;
+        padding-top: 5em;
+    }
+}
+@media only screen and (max-height: 600px) {
+    nav .full {
+        font-size: 60%;
+    }
+}
+/* nav > input:checked {
+    
+} */
+nav > input:checked ~ .full {
+    outline: 50vw solid rgba(0, 0, 0, 0.4);
+    right: 0;
+}
+svg .hamburger {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+nav > input:checked ~ svg .hamburger {
+    fill: white;
+}
+.hamburger {
+    /* fill: white; */
+}
+/* .full + svg {
+    background-color: aliceblue !important;
+} */
+
+nav span {
+    font-size: 2500%;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+    padding-left: 40px;
+    position: relative;
+    top: -50vh;
+}
+nav ul {
+    list-style: none;
+    font-size: 4em;
+    position: relative;
+    z-index: 200;
+}
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding-bottom: 0.5em;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+nav ul:hover a {
+    color: gray;
+}
+nav a:hover {
+    color: white !important;
+}
+nav a::after {
+    content: ' ';
+    display: block;
+    background-color: white;
+    width: 0vw;
+    height: 0.1em;
+    transition: 0.3s ease-out;
+}
+nav a:hover::after {
+    width: 100vw;
+}
